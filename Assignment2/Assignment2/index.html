@@ -1,0 +1,174 @@
+<!-- Brianna Craig
+September 26, 2024 (DUE OCT 10th 2024)
+Assignment 2 - Pizza Shop -->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 2 | Pizza Shop</title>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <meta name="description" content="making a pizza website">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- below are special fonts for the website to make it look a bit more unique and not boring -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- this is my css code to get it to work and make it look better -->
+    <link rel="preconnect" href="go to google fonts and grab one or more">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header>
+    <div>
+        <!-- logo here -->
+        <a href="#"><img src="./img/logo.png" alt="logo of pizza place"></a>  <!-- https://www.clipsafari.com/clips/o189439-pizza -->
+    </div>
+    <!-- little links like menu, cart, tracker, etc to add here -->
+    <nav>
+        <menu>
+            <li><a href="#" target="_self">Menu</a></li>
+            <li><a href="#" target="_self">Coupons</a></li>
+            <li><a href="#" target="_self">Tracker</a></li>
+            <li><a href="#" target="_self">Cart</a></li>
+        </menu>
+    </nav>
+</header>
+<!-- We need to name the place and get it looking better -->
+<section class="pizza-masthead"> <!-- dont use lesson-masthead because it's his code (oopsie) use some other name -->
+    <h1>Bri's Pizza Place</h1>
+</section>
+<main> <!-- Pictures of pizza + what they would like to order below maybe in a new main or even aside -->
+    <section>
+        <div>
+            <img src="./img/pepperoni.jpeg" alt="Pepperoni Pizza">
+            <p>Pepperoni Pizza</p>
+        </div>
+        <div>
+            <img src="./img/spinach.jpeg" alt="Spinach Pizza">
+            <p>Spinach Pizza</p>
+        </div>
+        <div>
+            <img src="./img/baconandpepperoni.jpeg" alt="Bacon and Pepperoni Pizza">
+            <p>Bacon and Pepperoni Pizza</p>
+        </div>
+        <div>
+            <img src="./img/pineappleandham.jpg" alt="Ham and Pineapple Pizza">
+            <p>Ham and Pineapple Pizza</p>
+        </div>
+    </section>
+</main>
+<aside>
+    <article>
+        <figure>
+            <h4>Order Here! (PickUp Only)</h4> <!-- Information to order below-->
+            <form action="somePFPFile" method="post">
+                <p><input name="name" placeholder="* Your Name" type="text" required></p>
+                <p><input name="email" placeholder="* Your Email" type="text" required></p>
+                <p><input type="number" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="* 705-999-9999" required></p>
+                <!-- Delivery or Pickup  -- I dont know how to put in address so Pickup Only (unless maybe i only did text but that wouldn't really be correct)
+                <input type="radio" id="Delivery" name="Choice" value="Delivery">
+                <label for="Delivery">Delivery</label>
+                <input type="radio" id="Pickup" name="Choice" value="Pickup">
+                <label for="Pickup">Pickup</label> -->
+                <!-- How many pizzas ? -->
+                <p><label>Quantity of Pizzas:</label></p>
+                <p><input type="number" name="quantity" min="1" max="10" required></p>
+                <!-- Pick Size of Pizza -->
+                <p><label>Size of Pizza:</label></p>
+                <p><input type="radio" id="Small" name="PizzaSize" value="Small">
+                    <label for="Small">Small</label>
+                    <input type="radio" id="Medium" name="PizzaSize" value="Medium">
+                    <label for="Medium">Medium</label>
+                    <input type="radio" id="Large" name="PizzaSize" value="Large">
+                    <label for="Large">Large</label>
+                </p>
+                <!-- Crust Liking -->
+                <p><label>Crust:</label></p>
+                <p><input type="radio" id="Regular" name="PizzaCrust" value="Regular">
+                    <label for="Regular">Regular Crust</label>
+                    <input type="radio" id="Thick" name="PizzaCrust" value="Thick">
+                    <label for="Thick">Thick Crust</label>
+                    <p><input type="radio" id="Thin" name="PizzaCrust" value="Thin">
+                    <label for="Thin">Thin Crust</label>
+                </p>
+                <!-- Sauce Appliance -->
+                <p><label>Sauce Amount:</label></p>
+                <p><input type="radio" id="NoSauce" name="PizzaSauce" value="NoSauce">
+                    <label for="NoSauce">No Sauce</label>
+                    <input type="radio" id="LightSauce" name="PizzaSauce" value="LightSauce">
+                    <label for="LightSauce">Light Sauce</label>
+                <p><input type="radio" id="RegularSauce" name="PizzaSauce" value="RegularSauce">
+                    <label for="RegularSauce">Regular Sauce</label>
+                    <input type="radio" id="HeavySauce" name="PizzaSauce" value="HeavySauce">
+                    <label for="HeavySauce">Heavy Sauce</label>
+                </p>
+                <!-- Toppings -->
+                <p><label>Choose Your Toppings:</label></p>
+                <p><input type="checkbox" id="Pepperoni" name="PizzaTopping1" value="Pepperoni">
+                    <label for="Pepperoni">Pepperoni</label>
+                    <input type="checkbox" id="Bacon" name="PizzaTopping2" value="Bacon">
+                    <label for="Bacon">Bacon</label>
+                    <input type="checkbox" id="Ham" name="PizzaTopping3" value="Ham">
+                    <label for="Ham">Ham</label>
+                    <p><input type="checkbox" id="Sausage" name="PizzaTopping4" value="Sausage">
+                    <label for="Sausage">Sausage</label>
+                <p><input type="checkbox" id="Olives" name="PizzaTopping5" value="Olives">
+                    <label for="Olives">Olives</label>
+                    <input type="checkbox" id="Spinach" name="PizzaTopping6" value="Spinach">
+                    <label for="Spinach">Spinach</label>
+                    <input type="checkbox" id="Pineapple" name="PizzaTopping7" value="">
+                    <label for="Pineapple">Pineapple</label>
+                   <p> <input type="checkbox" id="Mushrooms" name="PizzaTopping8" value="Mushrooms">
+                    <label for="Mushrooms">Mushrooms</label>
+                    <input type="checkbox" id="Jalapeno" name="PizzaTopping9" value="Jalapeno">
+                    <label for="Jalapeno">Jalapeno</label>
+                <p><input type="checkbox" id="ExtraCheese" name="PizzaTopping10" value="ExtraCheese">
+                    <label for="ExtraCheese">$ Extra Cheese</label>
+                </p>
+                <!-- Extra Toppings --- not going to add in final
+                <p><label>Extra Toppings:</label></p>
+                <p><input type="checkbox" id="ExtraCheese" name="ExtraTopping1" value="ExtraCheese">
+                    <label for="ExtraCheese">$Extra Cheese</label>
+                    </p> -->
+                <!-- Place Order -->
+                <input type="submit" value="Place Order">
+            </form>
+        </figure>
+    </article>
+</aside>
+<footer>
+    <div>
+        <a href="index.html"><img src="./img/logo.png" alt="Pizza Logo Footer"></a>
+    </div>
+    <div>
+        <!-- About Us Page -->
+        <h6>About Us</h6>
+        <a href="#" target="_self">Started in 2024
+        <p>Restaurant Locator
+        <p>Nutrition
+        <p>Our Quality
+            </p>
+        </a>
+    </div>
+    <div>
+        <h6>Company</h6> <!-- Company Stuff -->
+        <a href="#" target="_self">
+            <p>Our Company
+            <p>Leadership Team
+            <p>Careers
+            <p>Investors
+            </p>
+        </a>
+    </div>
+    <div>
+        <h6>Leave a Review!</h6>  <!-- review -->
+        <form action="somePFPFile" method="port">
+            <p><input name="name" placeholder="Your Name" type="text"></p>
+            <p><textarea placeholder="Type your review here..."></textarea></p>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</footer>
+</body>
+</html>
